@@ -9,12 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#996aee",
-        primaryHover: "#B896F6",
-        primaryText: "#d5c0f9",
-        secondary: "#43a047",
-        secondaryHover: "#4caf50",
-        background: "#1f1b24",
+        primary: "#34d399",
+        primaryHover: "#6ee7b7",
       },
 
       backgroundImage: {
