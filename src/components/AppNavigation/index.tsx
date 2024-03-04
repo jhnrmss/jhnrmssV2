@@ -6,12 +6,14 @@ import { twMerge } from "tailwind-merge";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(50);
-
+  const location = usePathname();
+  console.log(location);
   const controlNavbar = () => {
     if (window.scrollY < lastScrollY) {
       setShowNavbar(false);
@@ -28,13 +30,14 @@ const Navigation = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
+
   return (
     <div
       className={twMerge(
         showNavbar
           ? "transform -translate-y-[100px] ease-in-out duration-100"
           : "transform translate-x-0 ease-in-out duration-100",
-        "sticky bg-white/90 top-0 pt-6 "
+        "sticky bg-white/90 top-0 pt-6 z-10"
       )}
     >
       <div className="relative flex h-16 items-center justify-between">

@@ -1,9 +1,10 @@
-import Hero from "@/components/AppSections/Hero";
+import { AppAbout, AppHero } from "@/components";
 
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <AppHero />
+      <AppAbout />
     </div>
   );
 }

@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../styles/globals.css";
 import { twMerge } from "tailwind-merge";
-import Navigation from "@/components/AppNavigation";
-import Email from "@/components/AppEmail";
-import Socials from "@/components/AppSocials";
-import AppFooter from "@/components/AppFooter";
+import { AppEmail, AppFooter, AppNavigation, AppSocials } from "@/components";
+
 const poppins = Poppins({ style: "normal", weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,14 +20,14 @@ export default function RootLayout({
       <body
         className={twMerge(
           poppins.className,
-          "container h-screen min-h-screen w-full mx-auto px-10 md:px-16 lg:px-28 ease-in-out duration-300"
+          "container mx-auto px-10 md:px-16 lg:px-28 ease-in-out duration-300"
         )}
       >
         <main>
-          <Navigation />
-          <Socials />
-          <Email />
-          <div>
+          <AppNavigation />
+          <AppSocials />
+          <AppEmail />
+          <div className="relative h-screen min-h-screen w-full">
             {children}
             <AppFooter />
           </div>
