@@ -9,6 +9,7 @@ const poppins = Poppins({ style: "normal", weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "JhnrmssV2",
   description: "Personal Portfolio V2",
+  icons: "/static/main-logo.png",
 };
 export default function RootLayout({
   children,
