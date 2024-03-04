@@ -8,7 +8,7 @@ export const NavLinks = [
     url: "/#jobs",
   },
   {
-    name: "Work",
+    name: "Projects",
     url: "/#projects",
   },
   {

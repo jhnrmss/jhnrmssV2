@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../styles/globals.css";
-import AppHeader from "@/components/AppHeader";
+import { twMerge } from "tailwind-merge";
+import Navigation from "@/components/AppNavigation";
+import Email from "@/components/AppEmail";
+import Socials from "@/components/AppSocials";
+import AppFooter from "@/components/AppFooter";
+const poppins = Poppins({ style: "normal", weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "JhnrmssV2",
   description: "Personal Portfolio V2",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,16 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className=" bg-slate-900 leading-relaxed antialiased">
-        <div className="mx-auto min-h-screen px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 ">
-          <div className="lg:flex lg:justify-between lg:gap-4">
-            <header className="sticky top-0 ">
-              <AppHeader />
-            </header>
-
-            <main>{children}</main>
+      <body
+        className={twMerge(
+          poppins.className,
+          "container h-screen min-h-screen w-full mx-auto px-10 md:px-16 lg:px-28 ease-in-out duration-300"
+        )}
+      >
+        <main>
+          <Navigation />
+          <Socials />
+          <Email />
+          <div>
+            {children}
+            <AppFooter />
           </div>
-        </div>
+        </main>
       </body>
     </html>
   );

@@ -1,6 +1,9 @@
-import AppHeader from "@/components/AppHeader";
-import Image from "next/image";
+import Hero from "@/components/AppSections/Hero";
 
 export default function Home() {
-  return <AppHeader />;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 }
