@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         primary: "#2A5414",
       },
+      fontSize: {
+        "5xl": "clamp(1.875rem, 0.975rem + 2.25vw, 3rem)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

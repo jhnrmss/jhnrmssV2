@@ -9,10 +9,10 @@ const Hero = () => {
         <div className=" flex flex-col justify-center items-center h-full w-full">
           <div className="space-y-4">
             <p className="text-lg font-medium">Hi, my name is</p>
-            <p className="text-5xl font-extrabold text-primary">
+            <p className="text-5xl font-extrabold text-primary ">
               John Romie Reyes.
             </p>
-            <p className="relative flex items-center px-0 w-full text-lg whitespace-nowrap before:block before:relative before:top-[3px] before:w-[140px] before:h-[1px] before:mr-5 before:bg-primary before:lg:w-[120px] before:md:w-[100px] before:sm:mr-2.5">
+            <p className="relative flex items-center px-0 w-full text-lg whitespace-nowrap before:block before:relative before:top-[3px] before:w-[50px] before:h-[1px]  before:bg-primary before:lg:w-[90px] before:md:w-[60px] before:mr-2.5">
               Software Engineer
             </p>
             <p className="text-base">
@@ -21,7 +21,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center mt-6 lg:mt-0">
+        <div className="flex justify-center items-center">
           <img
             src="/static/background.png"
             alt="Programming"
