@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex h-screen w-full justify-center items-center md:transform md:-translate-y-[100px]">
+    <section className="flex h-screen mt-8 md:mt-0 w-full justify-center items-center md:transform md:-translate-y-[100px]">
       <div className="grid grid-cols-1 md:grid-cols-2 h-full ease-in-out duration-300 ">
         <div className=" flex flex-col justify-center items-center h-full w-full">
           <div className="space-y-4">

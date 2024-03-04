@@ -1,19 +1,18 @@
 "use client";
 import Link from "next/link";
-import { Dialog, Disclosure, Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import { NAVIGATION_LINKS } from "@/constants";
 import { twMerge } from "tailwind-merge";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(50);
-  const location = usePathname();
-  console.log(location);
+  const [path, setPath] = useState<string>("");
   const controlNavbar = () => {
     if (window.scrollY < lastScrollY) {
       setShowNavbar(false);
@@ -30,7 +29,11 @@ const Navigation = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
-
+  useEffect(() => {
+    const location = window.location.hash;
+    const clean = location.slice(1);
+    setPath(clean);
+  });
   return (
     <div
       className={twMerge(
@@ -67,10 +70,11 @@ const Navigation = () => {
                   key={item.name}
                   href={item.url}
                   className={twMerge(
-                    //   item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    "rounded-md px-3 py-2 text-lg font-medium"
+                    path === item.url.slice(2)
+                      ? "border-b-2 border-primary text-primary font-extrabold"
+                      : "border-none",
+                    " px-3 py-2 text-lg "
                   )}
-                  // aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                 </Link>

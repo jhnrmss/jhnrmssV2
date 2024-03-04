@@ -3,7 +3,7 @@ import { FaArrowDown } from "react-icons/fa";
 
 const Scroll = () => {
   return (
-    <div className="absolute bottom-20 left-0 right-0  w-full">
+    <div className="absolute bottom-20 left-0 right-0 w-full hidden md:block">
       <a
         href="#about"
         className="flex justify-center items-center gap-2 text-gray-900"

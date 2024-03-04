@@ -8,7 +8,7 @@ const About = () => {
         Get to know me!
       </p>
       <p className="text-lg font-medium text-center text-gray-700">
-        My Technical Knowledge
+        My Introduction
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-8 ease-in-out duration-300 my-10">
         <div className="flex justify-center items-center mt-6 lg:mt-0">
