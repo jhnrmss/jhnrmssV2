@@ -5,7 +5,7 @@ import { BiSolidBadgeCheck } from "react-icons/bi";
 
 const Skills = () => {
   return (
-    <section className="my-6 mb-40">
+    <section className="flow-root my-6 mb-40">
       <p className="text-5xl font-extrabold text-center  text-primary">
         Skills
       </p>

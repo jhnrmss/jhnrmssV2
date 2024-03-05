@@ -1,4 +1,4 @@
-import { AppAbout, AppHero, AppSkills } from "@/components";
+import { AppAbout, AppExperience, AppHero, AppSkills } from "@/components";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
       <AppHero />
       <AppAbout />
       <AppSkills />
+      <AppExperience />
     </div>
   );
 }

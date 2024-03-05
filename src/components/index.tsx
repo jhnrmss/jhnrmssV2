@@ -6,6 +6,6 @@ export { default as AppHero } from "./AppSections/Hero";
 export { default as AppAbout } from "./AppSections/About";
 export { default as AppScroll } from "./AppScroll";
 export { default as AppSkills } from "./AppSections/Skills";
-// export {default as AppExperience} from "./AppSections/Experience";
+export { default as AppExperience } from "./AppSections/Jobs";
 // export {default as AppProjects} from "./AppSections/Projects";
 // export {default as AppContact} from "./AppSections/Contact";
