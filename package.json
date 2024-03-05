@@ -1,5 +1,7 @@
 {
+  "homepage": "https://jhnrmss.vercel.app",
   "name": "v2",
+  "description": "Personal Portfolio V2",
   "version": "0.1.0",
   "private": true,
   "scripts": {

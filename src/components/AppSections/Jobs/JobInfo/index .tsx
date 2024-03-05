@@ -19,7 +19,7 @@ const JobInfo = ({ value }: { value: string }) => {
                 className="text-primary hover:font-extrabold"
               >{` @${val.company}`}</a>
             </p>
-            <p className="text-base  ">{val.started + " - " + val.ended}</p>
+            <p className="text-sm  ">{val.started + " - " + val.ended}</p>
             <ul className="list-disc mx-6 marker:text-primary">
               {val.description.map((desc, index) => (
                 <li key={val.company + `-${val.title}-desc-${index}`}>
