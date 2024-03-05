@@ -33,7 +33,7 @@ const Navigation = () => {
     const location = window.location.hash;
     const clean = location.slice(1);
     setPath(clean);
-  });
+  }, [path]);
   return (
     <div
       className={twMerge(

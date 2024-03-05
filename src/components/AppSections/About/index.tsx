@@ -1,4 +1,5 @@
 import { ABOUT_MORE } from "@/constants";
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
@@ -15,10 +16,12 @@ const About = () => {
           <div className="relative w-[310px] h-[310px]">
             <div className="absolute top-3 -right-1 w-[300px] h-[300px] border-4 border-primary rounded-md z-0" />
             <div className="bg-primary absolute top-1 left-1 hover:top-0 hover:left-0 w-[300px] h-[300px] rounded-md z-40 ease-in duration-100">
-              <img
+              <Image
                 src="/static/me.jpg"
                 alt="Programming"
                 className="rounded-md opacity-50 hover:opacity-100 ease-out duration-300"
+                width={300}
+                height={300}
               />
             </div>
           </div>
@@ -26,7 +29,10 @@ const About = () => {
         <div className="flex flex-col space-y-4 ">
           <div className="grid grid-cols-3 gap-2">
             {ABOUT_MORE.map((about) => (
-              <div className="flex flex-col items-center gap-2 border shadow-sm px-3 py-3 rounded-md ">
+              <div
+                key={about.Title}
+                className="flex flex-col items-center gap-2 border shadow-sm px-3 py-3 rounded-md "
+              >
                 <about.Icon className="h-6 w-6" />
                 <p className="text-sm">{about.Title}</p>
                 <p className="text-xs">{about.Description}</p>

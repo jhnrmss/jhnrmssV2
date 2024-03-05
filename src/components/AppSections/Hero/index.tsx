@@ -22,10 +22,13 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <img
+          <Image
             src="/static/background.png"
             alt="Programming"
-            className="w-auto h-auto"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <AppScroll />
